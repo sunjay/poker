@@ -1,0 +1,24 @@
+:local(.card) {
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:local(.sm) {
+      width: 60px;
+      height: 90px;
+      margin: 2px;
+    }
+
+    &, &:local(.md) {
+      width: 100px;
+      height: 146px;
+      margin: 5px;
+    }
+
+    &:local(.lg) {
+      width: 150px;
+      height: 220px;
+      margin: 5px;
+    }
+}
+

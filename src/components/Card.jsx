@@ -1,14 +1,12 @@
 const React = require('react');
 
-const Card = ({number, suit}) => (
-  <div style={{
-    display: 'inline-block',
-    width: 100,
-    height: 150,
-    margin: 5,
+const {card, sm, md, lg} = require('../../scss/card.scss');
+
+const SIZES = {sm, md, lg};
+
+const Card = ({number, suit, size = 'md'}) => (
+  <div className={[card, SIZES[size]].join(' ')} style={{
     backgroundImage: `url("static/cards/${number}_of_${suit}.svg")`,
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
   }} />
 );
 
